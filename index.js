@@ -24,6 +24,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/", (req, res) => {
+    res.send("API is running...")
+})
+
 app.use("/user", require("./Routes/UserRoutes"));
 app.use("/exercise", require("./Routes/ExerciseRoutes"));   
 app.use("/workout", require("./Routes/WorkoutRoutes"));
